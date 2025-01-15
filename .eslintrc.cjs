@@ -12,12 +12,21 @@ module.exports = {
   settings: { react: { version: "18.2" } },
   plugins: ["react", "react-hooks", "react-refresh"],
   rules: {
-    "react-refresh/only-export-components": "warn", // 
+    "react-refresh/only-export-components": 'warn', // 
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": 0, // không dùng đến
     "react/display-name": 0, // không dùng đến
 
+    // Mui
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*"]
+      }
+    ],
+
+    // Common
     "no-console": 1, // không console.log trong dự án để khi dev
     "no-lonely-if": 1, // không để if không mà là để else if 
     "no-unused-vars": 1, // không để biến không dùng 
@@ -33,8 +42,8 @@ module.exports = {
     "linebreak-style": 0, // không để dấu xuống dòng 
     "no-unexpected-multiline": "warn", // không để xuống dòng không mong muốn
     "keyword-spacing": 1, // không để dư khoảng trắng
-    "comma-dangle": 1, // không để dấu phẩy cuối
-    "comma-spacing": 1, // không để dư khoảng trắng
-    "arrow-spacing": 1,
+    'comma-dangle': 1, // không để dấu phẩy cuối
+    'comma-spacing': 1, // không để dư khoảng trắng
+    'arrow-spacing': 1,
   },
-};
+}
