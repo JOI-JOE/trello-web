@@ -1,0 +1,8 @@
+// Check đường dẫn liên quan đến ~/
+{
+    "compilerOptions": {
+        "paths": {
+        "~/*": ["./src/*"],
+        },
+    }
+}
